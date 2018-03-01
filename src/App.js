@@ -31,10 +31,17 @@ class App extends Component {
   }
 
   render() {
+    const btnStyle={
+      backgroundColor: 'white',
+      border: '1px solid green',
+      borderRadius: '12px',
+      cursor: 'pointer',
+      padding: '8px'
+    }
     return (
       <div className="App">
         <h1>Welcome to Burger App</h1>
-        <button onClick={() => this.switchNameHandler("RRV") }>Switch Name</button>
+        <button style={btnStyle} onClick={() => this.switchNameHandler("RRV") }>Switch Name</button>
         <Person name={this.state.persons[0].name} age={this.state.persons[0].age} nameChanged={this.nameChangeHandler}/>
         <Person name={this.state.persons[1].name} age={this.state.persons[1].age} click={this.switchNameHandler.bind(this, "Raghu Varma R")}/>
         <Person name={this.state.persons[2].name} age={this.state.persons[2].age}/>
