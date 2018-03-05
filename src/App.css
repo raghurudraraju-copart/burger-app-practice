@@ -2,6 +2,22 @@
   text-align: center;
 }
 
+.bold {
+  font-weight: bold;
+}
+
+.green {
+  color: green;
+}
+
+.yellow {
+  color: yellow;
+}
+
+.red {
+  color: red;
+}
+
 /* .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
