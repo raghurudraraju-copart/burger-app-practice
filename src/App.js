@@ -22,7 +22,9 @@ class App extends Component {
   // }
 
   deletePersonHandler = (personIndex) => {
-      const persons = this.state.persons;
+      //const persons = this.state.persons;
+      //const persons = this.state.persons.slice();//It will give the copy of the array not the refernced value.
+      const persons = [...this.state.persons];
       persons.splice(personIndex, 1);
       this.setState({persons: persons});
     };
