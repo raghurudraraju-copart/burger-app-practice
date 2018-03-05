@@ -63,7 +63,8 @@ class App extends Component {
 
   render() {
     const btnStyle={
-      backgroundColor: 'white',
+      backgroundColor: 'green',
+      color: 'white',
       border: '1px solid green',
       borderRadius: '12px',
       cursor: 'pointer',
@@ -80,6 +81,7 @@ class App extends Component {
           })}
         </div>
       );
+      btnStyle.backgroundColor = 'red';
     }
 
     return (
