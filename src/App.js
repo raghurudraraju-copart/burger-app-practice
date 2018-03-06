@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import Radium, { StyleRoot } from 'radium';
 import Person from './Person/Person';
 
 class App extends Component {
@@ -70,10 +69,6 @@ class App extends Component {
       borderRadius: '12px',
       cursor: 'pointer',
       padding: '8px',
-      ':hover': {
-        backgroundColor: 'lightgreen',
-        color: 'black'
-      }
     };
 
     let persons = null;
@@ -108,17 +103,15 @@ class App extends Component {
     }
 
     return (
-      <StyleRoot>
         <div className="App">
           <h1>Welcome to Burger App</h1>
           <p className={classes.join(' ')}>Hello User,</p>
           <button style={btnStyle} onClick={ this.togglePersonHandler }>Switch Name</button>
           <div>{persons}</div>
         </div>
-      </StyleRoot>
     );
     //return React.createElement('div', {className: 'App'}, React.createElement('h1', null, 'Welcome to Burger App'));
   }
 }
 
-export default Radium(App);
+export default App;
