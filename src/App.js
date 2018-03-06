@@ -82,10 +82,6 @@ class App extends Component {
         </div>
       );
       btnStyle.backgroundColor = 'red';
-      btnStyle[':hover'] = {
-        backgroundColor: 'lightred',
-        color: 'black'
-      }
     }
 
     const classes = ['bold'];
