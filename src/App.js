@@ -62,16 +62,9 @@ class App extends Component {
   };
 
   render() {
-    const btnStyle={
-      backgroundColor: 'green',
-      color: 'white',
-      border: '1px solid green',
-      borderRadius: '12px',
-      cursor: 'pointer',
-      padding: '8px',
-    };
 
     let persons = null;
+    let btnClass = '';
 
     if( this.state.showPersons) {
       persons = (
@@ -81,28 +74,28 @@ class App extends Component {
           })}
         </div>
       );
-      btnStyle.backgroundColor = 'red';
+      btnClass = cssClasses.red;
     }
 
-    const classes = ['bold'];
+    const classes = [cssClasses.bold];
 
     if(this.state.persons.length > 2) {
-      classes.push('green');
+      classes.push(cssClasses.green);
     }
 
     if(this.state.persons.length <= 2) {
-      classes.push('yellow');
+      classes.push(cssClasses.yellow);
     }
 
     if(this.state.persons.length <= 1) {
-      classes.push('red');
+      classes.push(cssClasses.red);
     }
 
     return (
         <div className={cssClasses.App}>
           <h1>Welcome to Burger App</h1>
           <p className={classes.join(' ')}>Hello User,</p>
-          <button style={btnStyle} onClick={ this.togglePersonHandler }>Switch Name</button>
+          <button className={btnClass } onClick={ this.togglePersonHandler }>Switch Name</button>
           <div>{persons}</div>
         </div>
     );
